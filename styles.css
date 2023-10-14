@@ -1,0 +1,110 @@
+
+:root {
+    --smaller: .75;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background: linear-gradient(-45deg,red, #ee7752, #e73c7e, #23a6d5, #76e397);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	
+    align-items: center;
+    
+    display: flex;
+    font-family: sans-serif
+      
+  }
+  
+  .container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+        
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  }
+  
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+
+  h1::before {  
+    transform: scaleX(0);
+    
+  }
+  
+  h1:hover::before {
+    color:rgb(255, 255, 255);
+    transform: scaleX(1);
+    
+  }
+  
+  h1::before {
+    content: "'Count your life by smiles, not tears'";
+    display: block;
+    position: relative;
+    transition: transform .5s ease-in-out;
+  }
+  
+  
+  
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+  
